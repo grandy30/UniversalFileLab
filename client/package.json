@@ -1,0 +1,1 @@
+{ "name":"universalfilelab-client","version":"0.1.0","private":true,"dependencies":{"react":"18.2.0","react-dom":"18.2.0","react-router-dom":"6.14.1","axios":"1.4.0"},"scripts":{"start":"serve client -s"}}

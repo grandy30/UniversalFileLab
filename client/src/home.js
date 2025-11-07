@@ -1,0 +1,1 @@
+import React from 'react';export default function Home(){return <div style={{padding:20}}><h1>UniversalFileLab</h1><p>Welcome</p></div>}
