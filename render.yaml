@@ -1,7 +1,21 @@
 services:
   - type: web
-    name: universalfilelab-backend
-    env: node
-    rootDir: server
-    buildCommand: npm install
-    startCommand: npm start
+    name: universalfilelab
+    env: docker
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_sXpU9zVQ2tON@ep-tiny-snow-ahvkef98-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+      - key: COINPAYMENTS_MERCHANT_ID
+        value: e786072de3d94e03ac092a542a067ad8
+      - key: COINPAYMENTS_PUBLIC_KEY
+        value: your_real_public_key_here
+      - key: COINPAYMENTS_PRIVATE_KEY
+        value: your_real_private_key_here
+      - key: COINPAYMENTS_IPN_SECRET
+        value: supersecretipn123
+      - key: COINPAYMENTS_IPN_URL
+        value: https://universalfilelab.onrender.com/api/payments/ipn
+      - key: COINPAYMENTS_CURRENCY
+        value: USDT
